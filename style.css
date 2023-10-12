@@ -1,0 +1,44 @@
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#p1 {
+    font-size: 18px;
+    text-align: center;
+}
+
+#p2 {
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#p3 {
+    font-size: 18px;
+    color: gold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: red;
+}
+
+span {
+    color: gold;
+    font-size: 24px;
+    margin: auto;
+    font-weight: bold;
+}
+
+#center {
+    text-align: center;
+}
+
+* {
+    background-color: black;
+    color: white;
+}
