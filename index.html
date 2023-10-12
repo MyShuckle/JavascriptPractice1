@@ -7,18 +7,35 @@
     <title>LMC 2700 Movie Tracker</title>
 </head>
 
+<script>
+    function createMovie() {
+        let newMovie = new Movie(document.getElementById('CreateMovie1').value, document.getElementById('CreateMovie2').value, document.getElementById('CreateMovie3').value);
+        addMovie(newMovie);
+    }
+</script>
+
 <body>
     <!--New Lines Begin Here-->
     <h2><img src="Welcome Message.png" style="margin: auto;"></h2>
-    <h3>Now Showing:</h3>
+    <h3 onClick="printMovies()">Now Showing: (Click Here To Refresh)</h3>
     <p id="p1"></p>
     <p id="p2"></p>
     <div id="center">
         <img src="Featured Star.png">
-        <span>Featured Movies!</span>
+        <input type="text" id="highStar">
+        <button onClick="highRatings(document.getElementById('highStar').value)"><span>Featured Movies! (Enter in left input tab then click Here To Refresh)</span></button>
         <img src="Featured Star.png">
     </div>
     <p id="p3"></p>
+    <h4>Movie Showing Panel</h4>
+    <p class="HowToCreateAMovie">Insert your movie title, movie rating (number from 1-5), and if you have watched the movie or not (true/false) into the boxes below, then click Create Movie.</p>
+    <input type="text" id="CreateMovie1">
+    <input type="text" id="CreateMovie2">
+    <input type="text" id="CreateMovie3">
+    <button onClick="createMovie()" id="CreateButton">Create Movie</button>
+    <p class="HowToCreateAMovie">Insert a movie here to change its watched status, then click Change Watched.</p>
+    <input type="text" id="ChangeMovie">
+    <button onClick="changeWatched(document.getElementById('ChangeMovie').value)" id="ChangeButton">Change Watched</button>
     <script src="script.js"> </script>
 </body>
 </html>

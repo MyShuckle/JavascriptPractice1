@@ -24,7 +24,7 @@ let printMovies = () => {
     document.getElementById("p2").innerHTML = "";
     console.log("Printing all movies...");
     for(let x = 0; x < allMovies.length; x++) {
-        document.getElementById("p1").innerHTML += Math.round((Math.random() * 13) + 8) + ":" + (15 * Math.trunc(Math.random() * 3 + 1)) + ": " + allMovies[x].title + ". This movie has a rating of " + allMovies[x].rating + " out of 5." + "<br>";
+        document.getElementById("p1").innerHTML += allMovies[x].title + ": This movie has a rating of " + allMovies[x].rating + " out of 5." + allMovies[x].haveWatched + "<br>";
         console.log(allMovies[x].title + ", rating of " + allMovies[x].rating + ", " + " haveWatched: " + allMovies[x].haveWatched);
     }
     document.getElementById("p2").innerHTML += "We are currently showing " + allMovies.length + " different types of movies.";
@@ -46,16 +46,18 @@ let highRatings = (rating) => {
             a++;
         }
     }
+    document.getElementById("p3").innerHTML += "There are currently " + a + " high-rated movies.";
     console.log("In total there are " + a + " matches.");
 }
 
 
 //Toggle the 'haveWatched' property of the specified movie 
 let changeWatched = (title) => {
-    if(title.haveWatched == true) {
-        title.haveWatched = false;
-    } else { 
-        title.haveWatched = true;
+    for(let i = 0; i < allMovies.length; i++) {
+        if(allMovies[i].title == title) {
+            allMovies[i].haveWatched = !allMovies[i].haveWatched;
+            break;
+        }
     }
     console.log("changing the status of the movie...");
 }
