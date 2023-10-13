@@ -38,6 +38,7 @@ let printMovies = () => {
 let highRatings = (rating) => {
     let a = 0;
     document.getElementById("p3").innerHTML = "";
+    document.getElementById("p4").innerHTML = "";
     console.log("printing movie that has higher rating than " + rating)
     for(let i = 0; i < allMovies.length; i++) {
         if(allMovies[i].rating > rating) {
@@ -46,7 +47,7 @@ let highRatings = (rating) => {
             a++;
         }
     }
-    document.getElementById("p4").innerHTML += "There are currently " + a + " high-rated movies.";
+    document.getElementById("p4").innerHTML += "In total there are " + a + " matches.";
     console.log("In total there are " + a + " matches.");
 }
 
