@@ -24,10 +24,10 @@ let printMovies = () => {
     document.getElementById("p2").innerHTML = "";
     console.log("Printing all movies...");
     for(let x = 0; x < allMovies.length; x++) {
-        document.getElementById("p1").innerHTML += allMovies[x].title + ": This movie has a rating of " + allMovies[x].rating + " out of 5." + allMovies[x].haveWatched + "<br>";
+        document.getElementById("p1").innerHTML += allMovies[x].title + ", rating of " + allMovies[x].rating + ", " + " haveWatched: " + allMovies[x].haveWatched + "<br>";
         console.log(allMovies[x].title + ", rating of " + allMovies[x].rating + ", " + " haveWatched: " + allMovies[x].haveWatched);
     }
-    document.getElementById("p2").innerHTML += "We are currently showing " + allMovies.length + " different types of movies.";
+    document.getElementById("p2").innerHTML += "You have " + allMovies.length + " movies in total."
     console.log("You have " + allMovies.length + " movies in total.");
     document.getElementById("p1").innerHTML += "<br>";
 }
@@ -41,12 +41,12 @@ let highRatings = (rating) => {
     console.log("printing movie that has higher rating than " + rating)
     for(let i = 0; i < allMovies.length; i++) {
         if(allMovies[i].rating > rating) {
-            document.getElementById("p3").innerHTML += allMovies[i].title + " has a rating of " + allMovies[i].rating + "<br>"; 
+            document.getElementById("p3").innerHTML += allMovies[i].title + " has a rating of " + allMovies[i].rating + "<br>";
             console.log(allMovies[i].title + " has a rating of " + allMovies[i].rating);
             a++;
         }
     }
-    document.getElementById("p3").innerHTML += "There are currently " + a + " high-rated movies.";
+    document.getElementById("p4").innerHTML += "There are currently " + a + " high-rated movies.";
     console.log("In total there are " + a + " matches.");
 }
 
