@@ -27,8 +27,8 @@ let printMovies = () => {
         document.getElementById("p1").innerHTML += allMovies[x].title + ", rating of " + allMovies[x].rating + ", " + " haveWatched: " + allMovies[x].haveWatched + "<br>";
         console.log(allMovies[x].title + ", rating of " + allMovies[x].rating + ", " + " haveWatched: " + allMovies[x].haveWatched);
     }
-    document.getElementById("p2").innerHTML += "You have " + allMovies.length + " movies in total."
-    console.log("You have " + allMovies.length + " movies in total.");
+    document.getElementById("p2").innerHTML += "You have " + allMovies.length + " movies in total"
+    console.log("You have " + allMovies.length + " movies in total");
     document.getElementById("p1").innerHTML += "<br>";
 }
 
@@ -47,8 +47,8 @@ let highRatings = (rating) => {
             a++;
         }
     }
-    document.getElementById("p4").innerHTML += "In total there are " + a + " matches.";
-    console.log("In total there are " + a + " matches.");
+    document.getElementById("p4").innerHTML += "In total there are " + a + " matches";
+    console.log("In total there are " + a + " matches");
 }
 
 
